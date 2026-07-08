@@ -22,6 +22,9 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	if gameend == true:
+		if Input.is_action_just_pressed("enter"):
+			set_physics_process(true)
+			get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")
 		return
 		
 	score += delta * 10
@@ -36,7 +39,7 @@ func _process(delta: float) -> void:
 		
 		
 		
-		
+	
 		
 		
 func spikespawn() :
@@ -63,7 +66,7 @@ func spikespawn() :
 	
 	
 func gameover():
-	get_tree().paused = true
+	set_physics_process(false)
 	
 	$CanvasLayer/ColorRect.visible = true
 	$CanvasLayer/Label.visible =false
@@ -71,3 +74,5 @@ func gameover():
 	
 	$CanvasLayer/Label2.text = "GAMEOVER \n PRESS ENTER TO GO TO MENU  " 
 	gameend = true
+	
+	

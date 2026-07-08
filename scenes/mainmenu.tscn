@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cea1sc4qofuos"]
+
+[ext_resource type="Script" uid="uid://cp4brl8x7xuec" path="res://scripts/mainmenu.gd" id="1_5mbse"]
+
+[node name="mainmenu" type="Control" unique_id=1330379100]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5mbse")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1806782640]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(1, 0.68, 0.68, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1877914332]
+layout_mode = 0
+offset_left = 425.00003
+offset_top = 137.0
+offset_right = 614.0
+offset_bottom = 216.0
+scale = Vector2(1.9, 1.9)
+text = "I FLIP GRAVITY"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+text_overrun_behavior = 2
+
+[node name="START" type="Button" parent="." unique_id=86075165]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 280.0
+offset_right = 661.0
+offset_bottom = 320.0
+text = "START
+"
+
+[node name="OPTION" type="Button" parent="." unique_id=302721435]
+layout_mode = 0
+offset_left = 532.0
+offset_top = 382.0
+offset_right = 659.0
+offset_bottom = 430.0
+text = "OPTIONS
+"
+
+[connection signal="pressed" from="START" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="OPTION" to="." method="_on_option_pressed"]
