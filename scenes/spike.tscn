@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b2hlg63dy1dgx"]
+
+[ext_resource type="Script" uid="uid://dg83423qyd254" path="res://scripts/spike.gd" id="1_ljd5v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mj4vg"]
+
+[node name="spikes" type="Area2D" unique_id=884416120]
+script = ExtResource("1_ljd5v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1822976548]
+shape = SubResource("RectangleShape2D_mj4vg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2053325073]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

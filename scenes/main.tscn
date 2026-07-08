@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://155xx7s6y6ta"]
 
+[ext_resource type="Script" uid="uid://blyusjbdydqg5" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://fyyoe5vf3xm1" path="res://scenes/character_body_2d.tscn" id="2_sugp2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgp6g"]
@@ -9,6 +10,7 @@ size = Vector2(1280, 20)
 size = Vector2(1280, 20)
 
 [node name="MAIN" type="Node2D" unique_id=1597174910]
+script = ExtResource("1_0wfyh")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=734599278]
 offset_right = 1280.0
@@ -28,10 +30,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -5.0
-offset_top = 620.0
-offset_right = 1275.0
-offset_bottom = 640.0
+offset_left = -8.0
+offset_top = 649.0
+offset_right = 1272.0
+offset_bottom = 669.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.02, 0.014750001, 0.0074, 1)
@@ -44,7 +46,7 @@ position = Vector2(640, 10)
 shape = SubResource("RectangleShape2D_o5qli")
 
 [node name="CharacterBody2D" parent="." unique_id=265115828 instance=ExtResource("2_sugp2")]
-position = Vector2(691, 612)
+position = Vector2(699, 593)
 
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D" unique_id=932368763]
 position = Vector2(-88, -551)

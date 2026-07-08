@@ -4,7 +4,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2brh"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=265115828]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=265115828 groups=["player"]]
 script = ExtResource("1_lj8jo")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=4772137]
