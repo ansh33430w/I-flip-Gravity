@@ -71,8 +71,10 @@ func gameover():
 	$CanvasLayer/ColorRect.visible = true
 	$CanvasLayer/Label.visible =false
 	$CanvasLayer/Label2.visible = true
+	Global.updatescore(int(score))
 	
-	$CanvasLayer/Label2.text = "GAMEOVER \n PRESS ENTER TO GO TO MENU  " 
+	
+	$CanvasLayer/Label2.text = "GAMEOVER \nPRESS ENTER TO GO TO MENU  " + " \nBest Score" + str(Global.highscore)
 	gameend = true
 	
 	
