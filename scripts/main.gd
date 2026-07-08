@@ -10,7 +10,7 @@ var steak = 0
 var score = 0
 var last_ceiling = true
 var gameend = false
-
+var shakeamt = 0.0
 
 func _ready() -> void:
 	add_to_group("game"
@@ -27,6 +27,9 @@ func _process(delta: float) -> void:
 			set_physics_process(true)
 			get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")
 		return
+	if shakeamt> 0:
+		shakeamt = max(shakeamt -delta *5 ,0)
+		$Camera2D2.offset =Vector2(randf_range(-1,1),randf_range(-1,1)*shakeamt)
 		
 	score += delta * 10
 	$CanvasLayer/Label.text = "SCORE : " +str(int(score))
@@ -70,7 +73,7 @@ func spikespawn() :
 	
 func gameover():
 	set_physics_process(false)
-	
+	shakeamt =  20 
 	$CanvasLayer/ColorRect.visible = true
 	$CanvasLayer/Label.visible =false
 	$CanvasLayer/Label2.visible = true

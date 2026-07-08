@@ -44,7 +44,8 @@ func gravityflip() :
 	
 	gravity_direction *= -1
 	color_rect.color = Color(1,.5,.2) if gravity_direction == -1 else Color(.2,.8,1)
-	
+	$flipparticles.restart()
+	$flipparticles.emitting=true
 		
 		
 		

@@ -16,7 +16,7 @@ script = ExtResource("1_0wfyh")
 [node name="ColorRect3" type="ColorRect" parent="." unique_id=103930989]
 offset_left = 35.0
 offset_top = -4.0
-offset_right = 1187.0
+offset_right = 1186.0
 offset_bottom = 643.0
 
 [node name="Camera2D2" type="Camera2D" parent="." unique_id=932368763]
