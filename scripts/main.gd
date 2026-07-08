@@ -19,6 +19,7 @@ func _ready() -> void:
 	
 	$CanvasLayer/Label.visible = true
 	$CanvasLayer/Label2.visible =false
+	$CanvasLayer/Label3.text = "Best Score : " + str(Global.highscore)
 	
 func _process(delta: float) -> void:
 	if gameend == true:
@@ -28,8 +29,10 @@ func _process(delta: float) -> void:
 		return
 		
 	score += delta * 10
-	$CanvasLayer/Label.text = "SCORE" +str(int(score))
+	$CanvasLayer/Label.text = "SCORE : " +str(int(score))
 	gamespeed = 400 + int(score) /4
+	var spd_ratio = clamp((gamespeed-400)/400.0,0,1)
+	$ColorRect3.color = Color(0.1,0.1,0.15).lerp(Color(0.3,0.05,0.05),spd_ratio)
 	
 	spaentimer  += delta
 	if spaentimer >= spawnwait:
