@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://155xx7s6y6ta"]
+
+[ext_resource type="PackedScene" uid="uid://fyyoe5vf3xm1" path="res://scenes/character_body_2d.tscn" id="2_sugp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgp6g"]
+size = Vector2(1280, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5qli"]
+size = Vector2(1280, 20)
+
+[node name="MAIN" type="Node2D" unique_id=1597174910]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=734599278]
+offset_right = 1280.0
+offset_bottom = 20.0
+color = Color(0, 0, 0, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ColorRect" unique_id=678832287]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/StaticBody2D" unique_id=1732530062]
+position = Vector2(640, 10)
+shape = SubResource("RectangleShape2D_sgp6g")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=935745555]
+custom_minimum_size = Vector2(1280, 20)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = 620.0
+offset_right = 1275.0
+offset_bottom = 640.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.014750001, 0.0074, 1)
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ColorRect2" unique_id=618460910]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect2/StaticBody2D" unique_id=1161272870]
+position = Vector2(640, 10)
+shape = SubResource("RectangleShape2D_o5qli")
+
+[node name="CharacterBody2D" parent="." unique_id=265115828 instance=ExtResource("2_sugp2")]
+position = Vector2(691, 612)
+
+[node name="Camera2D2" type="Camera2D" parent="CharacterBody2D" unique_id=932368763]
+position = Vector2(-88, -551)
