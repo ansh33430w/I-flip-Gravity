@@ -13,8 +13,10 @@ script = ExtResource("1_c2u1v")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1190918585]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_left = 2.0
+offset_top = 16.0
+offset_right = 1154.0
+offset_bottom = 664.0
 color = Color(0.57254905, 0.81960785, 1, 1)
 
 [node name="Button" type="Button" parent="." unique_id=971834924]
@@ -48,5 +50,12 @@ offset_right = 707.0
 offset_bottom = 174.46579
 scale = Vector2(1.535, 1.535)
 text = "OPTION MENU"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="." unique_id=584923908]
+layout_mode = 0
+offset_left = 595.0
+offset_top = 301.0
+offset_right = 689.0
+offset_bottom = 330.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

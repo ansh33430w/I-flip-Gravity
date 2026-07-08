@@ -15,7 +15,7 @@ const max_fall_speed = 700
 
 
 func _ready() -> void:
-	color_rect.color = Color(0.97, 0.652, 0.337, 1.0)
+	color_rect.color =Global.playercolor
 	
 	
 func _physics_process(delta: float) -> void:
@@ -43,8 +43,13 @@ func _unhandled_input(event: InputEvent) -> void:
 func gravityflip() :
 	
 	gravity_direction *= -1
-	color_rect.color = Color(1,.5,.2) if gravity_direction == -1 else Color(.2,.8,1)
+	var base = Global.playercolor
+	var flipped = base.inverted()
+	
+	color_rect.color = flipped if gravity_direction ==-1 else base
+	$flipparticles.modulate= color_rect.color
 	$flipparticles.restart()
+	
 	$flipparticles.emitting=true
 		
 		

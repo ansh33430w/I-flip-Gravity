@@ -4,7 +4,8 @@ extends Control
 func _ready() -> void:
 	$HSlider.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master")))
 	$HSlider.value_changed.connect(_on_volume_changed)
-	
+	$ColorPickerButton.color = Global.playercolor
+	$ColorPickerButton.color_changed.connect(_on_color_changed)
 	
 	
 func _on_volume_changed(value):
@@ -18,3 +19,7 @@ func _on_volume_changed(value):
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")
 	
+	
+func _on_color_changed(color):
+	Global.playercolor=color
+	Global.savesettings()
