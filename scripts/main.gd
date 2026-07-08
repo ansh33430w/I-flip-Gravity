@@ -17,6 +17,9 @@ func _ready() -> void:
 	
 	)
 	
+	$CanvasLayer/Label.visible = true
+	$CanvasLayer/Label2.visible =false
+	
 func _process(delta: float) -> void:
 	if gameend == true:
 		return
@@ -61,4 +64,10 @@ func spikespawn() :
 	
 func gameover():
 	get_tree().paused = true
+	
+	$CanvasLayer/ColorRect.visible = true
+	$CanvasLayer/Label.visible =false
+	$CanvasLayer/Label2.visible = true
+	
+	$CanvasLayer/Label2.text = "GAMEOVER \n PRESS ENTER TO GO TO MENU  " 
 	gameend = true

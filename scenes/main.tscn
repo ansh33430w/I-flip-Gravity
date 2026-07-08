@@ -56,5 +56,23 @@ position = Vector2(753, 499)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=870605324]
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=625157405]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 54.0
+offset_top = 31.0
+offset_right = 122.0
+offset_bottom = 54.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=57665108]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12, 0.11557999, 0.1044, 1)
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=160282634]
+offset_left = 351.0
+offset_top = 196.0
+offset_right = 901.0
+offset_bottom = 427.0
