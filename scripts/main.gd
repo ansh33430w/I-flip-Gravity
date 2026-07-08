@@ -5,7 +5,11 @@ const SPIKE= preload("res://scenes/spike.tscn")
 
 var spaentimer = 0
 var spawnwait = 1.8
-var gamespeed = 400
+var gamespeed = 5
+var steak = 0
+var score = 0
+var last_ceiling = true
+var gameend = false
 
 
 func _ready() -> void:
@@ -14,8 +18,16 @@ func _ready() -> void:
 	)
 	
 func _process(delta: float) -> void:
+	if gameend == true:
+		return
+		
+	score += delta * 10
+	$CanvasLayer/Label.text = "SCORE" +str(int(score))
+	gamespeed = 400 + int(score) /4
+	
 	spaentimer  += delta
 	if spaentimer >= spawnwait:
+		spawnwait = randf_range(1.5,2.2)
 		spaentimer = 0 
 		spikespawn()
 		
@@ -26,14 +38,27 @@ func _process(delta: float) -> void:
 		
 func spikespawn() :
 	var Spike = SPIKE.instantiate()
+	print("spikespawwned")
 	Spike.speed = gamespeed
-	Spike.on_ceiling = randi() % 2 == 0
-	Spike.position= Vector2(1300,610 if not Spike.on_ceiling else 30)
 	
+	var choice = randi() %2 ==0
+	if steak >= 2:
+		choice = not last_ceiling
+	
+	if choice == last_ceiling:
+		steak +=1
+	else:
+		steak = 1
+	
+	last_ceiling=choice
+	
+	
+	Spike.on_ceiling = choice
+	Spike.position = Vector2(1300,30 if choice else 610)
 	add_child(Spike)
 	
 	
 	
 func gameover():
 	get_tree().paused = true
-	
+	gameend = true

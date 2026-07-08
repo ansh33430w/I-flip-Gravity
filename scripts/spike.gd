@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 		
 		
 		
-func generate():
+func _draw():
 	var color = Color(1,.2,.2)
 	if on_ceiling :
 		draw_polygon(PackedVector2Array([Vector2(-15,-30), Vector2(15,-30),Vector2(0,0)]),PackedColorArray([color]))
@@ -38,5 +38,7 @@ func generate():
 
 
 func _on_body_entered(body: Node2D) -> void:
+	print("ghello
+	")
 	if body.is_in_group("player"):
 		get_tree().call_group("game","gameover")

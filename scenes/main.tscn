@@ -18,9 +18,11 @@ offset = Vector2(0, 277.775)
 ignore_rotation = false
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=734599278]
+offset_top = 620.0
 offset_right = 1280.0
-offset_bottom = 20.0
+offset_bottom = 640.0
 color = Color(0, 0, 0, 1)
+metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="ColorRect" unique_id=678832287]
 
@@ -35,10 +37,8 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -13.0
-offset_top = 621.0
-offset_right = 1267.0
-offset_bottom = 641.0
+offset_right = 1280.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.02, 0.014750001, 0.0074, 1)
@@ -51,4 +51,10 @@ position = Vector2(640, 10)
 shape = SubResource("RectangleShape2D_o5qli")
 
 [node name="CharacterBody2D" parent="." unique_id=265115828 instance=ExtResource("2_sugp2")]
-position = Vector2(699, 593)
+position = Vector2(753, 499)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=870605324]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=625157405]
+offset_right = 40.0
+offset_bottom = 23.0
