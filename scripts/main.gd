@@ -4,7 +4,7 @@ extends Node2D
 const SPIKE= preload("res://scenes/spike.tscn")
 
 var spaentimer = 0
-var spawnwait = .5
+var spawnwait = 1.8
 var gamespeed = 400
 
 

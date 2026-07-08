@@ -11,7 +11,10 @@ script = ExtResource("1_ljd5v")
 shape = SubResource("RectangleShape2D_mj4vg")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2053325073]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 11.0
+offset_bottom = 10.0
+color = Color(1, 0.13, 0.13, 1)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

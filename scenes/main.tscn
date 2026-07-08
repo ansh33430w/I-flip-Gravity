@@ -12,6 +12,11 @@ size = Vector2(1280, 20)
 [node name="MAIN" type="Node2D" unique_id=1597174910]
 script = ExtResource("1_0wfyh")
 
+[node name="Camera2D2" type="Camera2D" parent="." unique_id=932368763]
+position = Vector2(611, 42)
+offset = Vector2(0, 277.775)
+ignore_rotation = false
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=734599278]
 offset_right = 1280.0
 offset_bottom = 20.0
@@ -30,10 +35,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -8.0
-offset_top = 649.0
-offset_right = 1272.0
-offset_bottom = 669.0
+offset_left = -13.0
+offset_top = 621.0
+offset_right = 1267.0
+offset_bottom = 641.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.02, 0.014750001, 0.0074, 1)
@@ -47,6 +52,3 @@ shape = SubResource("RectangleShape2D_o5qli")
 
 [node name="CharacterBody2D" parent="." unique_id=265115828 instance=ExtResource("2_sugp2")]
 position = Vector2(699, 593)
-
-[node name="Camera2D2" type="Camera2D" parent="CharacterBody2D" unique_id=932368763]
-position = Vector2(-88, -551)
